@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #fff;
 }
 .navbarcontainer .logocontainer {
   width: 70%;
@@ -13,12 +14,12 @@
 }
 .navbarcontainer .searchbox {
   width: 350px;
-  height: 30px;
+  height: 40px;
   text-align: center;
   font-size: 15px;
   margin-top: 10px;
-  border: 2px solid black;
-  border-radius: 2px;
+  border: 2px solid darkgray;
+  border-radius: 10px;
   margin-left: 90px;
 }
 .navbarcontainer .searchbox:focus {

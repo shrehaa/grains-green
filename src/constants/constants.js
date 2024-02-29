@@ -1,0 +1,1 @@
+export const categories = ["Breakfast","Lunch","Dinner","Snacking","Party","Beverages","Desserts"]

@@ -1,0 +1,17 @@
+.categories-container{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.categories-container .items{
+    color: #2f6a34;
+    margin: 13px;
+    font-size: 24px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    
+
+}

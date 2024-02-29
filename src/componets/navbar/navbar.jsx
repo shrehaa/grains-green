@@ -14,12 +14,12 @@ const Navbar = () => {
             placeholder="Enter cusine, resturant or mood"
             name="search"
           />
-          <img className="searchicon" src={search} />
+          <img className="searchicon" alt="search" src={search} />
         </div>
       </div>
       <div className="credentials">
-        <button className="cred-btn">Sign UP</button>
-        <button className="cred-btn">Sign UP</button>
+        <button className="cred-btn">Login</button>
+        <button className="cred-btn">Sign Up</button>
       </div>
       <div className="navitems"></div>
     </div>
