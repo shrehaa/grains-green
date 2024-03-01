@@ -1,0 +1,12 @@
+.menu-container{
+  margin: 20px;
+}
+.menu-container h2{
+    color: #2f6a34
+}
+.menu-container .stack{
+    margin-top: 20px;
+}
+.menu-container .filter{
+    background-color:#2f6a34;
+}
