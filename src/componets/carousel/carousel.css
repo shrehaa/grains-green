@@ -1,0 +1,31 @@
+.carousel-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container .mui-carousel {
+  width: 100%;
+}
+.carousel-container .img-food {
+  height: 350px;
+  width: 100%;
+}
+.carousel-container .papermui {
+  display: flex;
+  flex-direction: column;
+}
+.carousel-container .papermui h2 {
+  text-align: center;
+  color: #2f6a34;
+  background-color: #dfeeeb;
+}
+.carousel-container .papermui .CheckButton {
+  background-color: #dfeeeb;
+  color: #2f6a34;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
