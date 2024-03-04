@@ -1,12 +1,33 @@
-.menu-container{
+.menu-container {
   margin: 20px;
 }
-.menu-container h2{
-    color: #2f6a34
+.menu-container h2 {
+  color: #2f6a34;
 }
-.menu-container .stack{
-    margin-top: 20px;
+.menu-container .stack {
+  margin-top: 20px;
 }
-.menu-container .filter{
-    background-color:#2f6a34;
+.menu-container .filter-btn {
+  background-color: #2f6a34;
 }
+.menu-container .filter-btn:hover {
+  background-color: black;
+}
+.menu-container .card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.menu-container .menu-cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.menu-container .cart{
+  border-radius:15px;
+  height:30px;
+  width:80px;
+  font-size:12px;
+  background-color:"red";
+  color:"white"
+}
+

@@ -3,6 +3,7 @@ import  Carousels  from "./componets/carousel/carousel";
 import Categories from "./componets/categories/categories";
 import Navbar from "./componets/navbar/navbar";
 import Menu from "./componets/Menu/menu";
+import About from "./componets/about/about";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Categories/>
       <Carousels/>
       <Menu/>
+      <About/>
     </div>
   );
 }

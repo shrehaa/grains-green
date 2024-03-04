@@ -4,6 +4,17 @@
     display: flex;
     justify-content: center;
     background-color: black;
+    
+}
+.categories-container .menu-btn{
+    background-color: black;
+    color:#2f6a34;
+    font-size: 24px;
+    font-weight: bold;
+}
+.categories-container .menu-btn:hover{
+    background-color: black;
+    color: #2f6a34;
 }
 .categories-container .items{
     color: #2f6a34;
@@ -12,6 +23,8 @@
    
     font-weight: bold;
     cursor: pointer;
-    
+}
 
+.categories-container .menu-expand{
+    background-color: lightskyblue !important;
 }

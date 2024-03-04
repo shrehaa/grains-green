@@ -8,7 +8,7 @@ const Carousels = () => {
     return (
       <Paper className="papermui">
         <h2>The menu's most hot favourite & famous dishes</h2>
-        <img className="img-food" src={item} />
+        <img className="img-food" alt="food" src={item} />
         <Button className="CheckButton">{name}</Button>
       </Paper>
     );
