@@ -20,7 +20,7 @@
   justify-content: center;
   color: #333;
   background: #eee;
-   padding: 1rem;
+  padding: 1rem;
   /* box-shadow: 0 0 1rem #000 inset;  */
   overflow-x: auto;
   /* position: relative; */
@@ -28,7 +28,7 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  h1{
+  h1 {
     color: #000;
   }
 }
@@ -42,8 +42,6 @@
   border-radius: 6px;
   cursor: pointer;
   transition: all 250ms ease-in-out;
-
-  
 
   h2 {
     text-align: center;

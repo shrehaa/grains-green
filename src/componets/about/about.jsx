@@ -24,7 +24,7 @@ const About = () => {
     <div className="about-container">
       <div className="main-container">
         <div className="text-container">
-          <h2 >Welcome you!</h2>
+          <h2>Welcome you!</h2>
           <h1>About Grains & Greens</h1>
           <p>
             THE PIONEERS OF DELIVERING OLD TRADITIONAL STREET FOOD DELICACIES

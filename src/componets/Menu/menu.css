@@ -22,12 +22,11 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
-.menu-container .cart{
-  border-radius:15px;
-  height:30px;
-  width:80px;
-  font-size:12px;
-  background-color:"red";
-  color:"white"
+.menu-container .cart {
+  border-radius: 15px;
+  height: 30px;
+  width: 80px;
+  font-size: 12px;
+  background-color: "red";
+  color: "white";
 }
-
