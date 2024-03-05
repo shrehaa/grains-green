@@ -4,6 +4,7 @@ import Categories from "./componets/categories/categories";
 import Navbar from "./componets/navbar/navbar";
 import Menu from "./componets/Menu/menu";
 import About from "./componets/about/about";
+import Review from "./componets/reviews/review";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Carousels/>
       <Menu/>
       <About/>
+      <Review/>
     </div>
   );
 }
