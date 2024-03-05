@@ -1,0 +1,21 @@
+.footer-container{
+    height: 10vh;
+    width: 97%;
+    margin: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container ul{
+    display: flex;
+    gap: 12px;
+    
+}
+.footer-container ul li{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 18px;
+    
+}

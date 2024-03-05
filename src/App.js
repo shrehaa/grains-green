@@ -5,6 +5,7 @@ import Navbar from "./componets/navbar/navbar";
 import Menu from "./componets/Menu/menu";
 import About from "./componets/about/about";
 import Review from "./componets/reviews/review";
+import Footer from "./componets/footer/footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Menu/>
       <About/>
       <Review/>
+      <Footer/>
     </div>
   );
 }
