@@ -24,9 +24,17 @@
 }
 .menu-container .cart {
   border-radius: 15px;
-  height: 30px;
-  width: 80px;
+  /* max-height: 100%;
+  max-width: 100%; */
   font-size: 12px;
   background-color: "red";
   color: "white";
+  margin: 20px;
+}
+
+.menu-container .submenu{
+  margin-left: 12px;
+  margin-top: 15px;
+  text-shadow: 2px 2px gray;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

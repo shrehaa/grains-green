@@ -6,6 +6,7 @@ import Menu from "./componets/Menu/menu";
 import About from "./componets/about/about";
 import Review from "./componets/reviews/review";
 import Footer from "./componets/footer/footer";
+import CustomizedAccordions from "./componets/accordionMenu/accmenu";
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
       <Navbar />
       <Categories/>
       <Carousels/>
-      <Menu/>
+      <CustomizedAccordions/>
       <About/>
       <Review/>
       <Footer/>
+      
     </div>
   );
 }

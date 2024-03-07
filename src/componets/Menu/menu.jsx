@@ -45,31 +45,27 @@ const Menu = () => {
           Chef Special
         </Button>
       </Stack>
+      <Typography className="submenu" variant="h4" color="#000">
+        Bowls
+      </Typography>
+
       <div className="menu-cards">
         {carddata &&
           carddata.map((item) => {
             return (
-              <Card className="card">
+              <Card className="cart">
                 <CardMedia
                   component="img"
                   alt="green iguana"
-                  height="140"
+                  height="150px"
                   image={item.im}
                 />
                 <CardContent>
-                  <div style={{ height: "60px", marginBottom: "10px" }}>
-                    <Typography
-                      gutterBottom
-                      color="green"
-                      variant="h5"
-                      component="div"
-                    >
-                      {item.t}
-                    </Typography>
-                  </div>
-                  <Typography variant="h6" color="black">
-                    ₹ {item.p}
-                  </Typography>
+                  <h3 gutterBottom color="green" component="div">
+                    {item.t}
+                  </h3>
+
+                  <h2>₹ {item.p}</h2>
                 </CardContent>
                 <CardActions>
                   <Button sx={styles.cart} size="small">
