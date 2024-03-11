@@ -5,7 +5,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import { menuItems, carddata } from "../../constants/constants";
+import { menuItems, carddata, categories } from "../../constants/constants";
 import "./accmenu.css";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -13,7 +13,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Stack from "@mui/material/Stack";
-import Popover from "@mui/material/Popover";
 
 const styles = {
   cart: {
@@ -72,17 +71,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = useState([...menuItems]);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-
-  const handlePopoverOpen = (event) => {
-    console.log(event, "hey");
-    setAnchorEl(true);
-  };
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
+  const [showOptions, setshowOptions] = useState(carddata);
 
   const handleChange = (panel) => (event, newExpanded) => {
     var array = expanded;
@@ -98,61 +87,32 @@ export default function CustomizedAccordions() {
     }
   };
 
-  const popper = (item) => {
-    return (
-      <Popover
-        id={`mouse-over-popover`}
-        sx={{
-          pointerEvents: "none",
-        }}
-        open={open}
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: "center",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "center",
-          horizontal: "center",
-        }}
-        onClose={handlePopoverClose}
-        disableRestoreFocus
-      >
-        <div style={{ height: "400px", width: "400px" }}>
-          <img
-            height="250px"
-            width="250px"
-            src="https://d3gy1em549lxx2.cloudfront.net/af6ed6ca-bf23-4cf3-b2ed-a0090b1f8b53.JPG"
-          />
-          <p>hi</p>
-        </div>
-      </Popover>
-    );
-  };
-
   const handleExpand = (panel) => {
     return expanded && expanded.includes(panel);
+  };
+
+  const filterContent = (arr, fil) => {
+    var data = arr.filter((item) => {
+      return item.ct && item.ct.includes(fil);
+    });
+    setshowOptions(data);
   };
 
   return (
     <div className="menu-container">
       <h2>Mouth Watering healthy food from the Greens 🌳</h2>
       <Stack className="stack" direction="row" spacing={2}>
-        <Button className="filter-btn" variant="contained">
-          All
-        </Button>
-        <Button className="filter-btn" variant="contained">
-          Newly Lauched
-        </Button>
-        <Button className="filter-btn" variant="contained">
-          Fast Delivery
-        </Button>
-        <Button className="filter-btn" variant="contained">
-          Highly Rates
-        </Button>
-        <Button className="filter-btn" variant="contained">
-          Chef Special
-        </Button>
+        {categories.map((item) => {
+          return (
+            <Button
+              onClick={() => filterContent(carddata, item.toLowerCase())}
+              className="filter-btn"
+              variant="contained"
+            >
+              {item}
+            </Button>
+          );
+        })}
       </Stack>
       {menuItems.map((food, idx) => {
         return (
@@ -160,6 +120,7 @@ export default function CustomizedAccordions() {
             expanded={handleExpand(food)}
             onChange={handleChange(food)}
             key={idx}
+            id={food}
           >
             <AccordionSummary
               aria-controls="panel1d-content"
@@ -169,24 +130,12 @@ export default function CustomizedAccordions() {
             </AccordionSummary>
             <AccordionDetails>
               <div className="menu-cards">
-                {carddata &&
-                  carddata.map((item) => {
-                    if (item.mainCategory === food)
+                {showOptions &&
+                  showOptions.map((item) => {
+                    if (item.mainCategory === food) {
                       return (
-                        <div id={item.i}>
-                          <Card
-                            aria-owns={
-                              open ? `mouse-over-popover` : undefined
-                            }
-                            aria-haspopup="true"
-                            onMouseEnter={(e) => {
-                              handlePopoverOpen(e);
-                            }}
-                            onMouseLeave={handlePopoverClose}
-                            className="cart"
-                            
-                            key={item.i}
-                          >
+                        <div>
+                          <Card className="cart" key={item.i}>
                             <CardMedia
                               component="img"
                               alt="green iguana"
@@ -206,9 +155,9 @@ export default function CustomizedAccordions() {
                               </Button>
                             </CardActions>
                           </Card>
-                          {popper()}
                         </div>
                       );
+                    }
                   })}
               </div>
             </AccordionDetails>

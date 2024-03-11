@@ -6,7 +6,7 @@ import src5 from "../assets/src5.jpg";
 import src6 from "../assets/src6.JPG";
 
 export const src = [
-  { img: src1, name: "Bowls 1" },
+  { img: src1, name: "Bowls 1" },  
   { img: src2, name: "Bowls 2" },
   { img: src3, name: "Bowls 3" },
   { img: src4, name: "Bowls 4" },
@@ -16,6 +16,7 @@ export const src = [
 export const categories = ["Breakfast", "Lunch", "Dinner", "Snacking", "Party"];
 
 export const menuItems = [
+  "Breakfast",
   "Bowls",
   "Superbowls",
   "Pasta",
@@ -37,7 +38,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/e19f4994-14c0-4bfa-80ac-24a7cc05e907.JPG",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -50,7 +51,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/90bbdd8c-f6e5-44ac-a7d9-e3c10c7783a4.JPG",
-    ct: ["Lunch", "Dinner", "Snacking", "Party"],
+    ct: ["lunch", "dinner", "snacking", "party"],
     egg: true,
   },
   {
@@ -63,7 +64,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/af6ed6ca-bf23-4cf3-b2ed-a0090b1f8b53.JPG",
-    ct: ["Lunch", "Dinner", "Snacking", "Party"],
+    ct: ["lunch", "dinner", "snacking", "party"],
     egg: true,
   },
   {
@@ -76,7 +77,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/ec24e1f3-a5ae-449a-b79f-930cbc5ed7bd.JPG",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -89,7 +90,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/ddf7ef51-23cc-46d9-a2a6-928059e5844e.JPG",
-    ct: ["Lunch", "Dinner", "Party"],
+    ct: ["lunch", "dinner", "party"],
     egg: false,
   },
   {
@@ -101,7 +102,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/1307cd7d-f525-40ca-ac41-f5fc638738cf.jpg",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -114,7 +115,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/163820df-60ed-473e-b89a-3fe0ae38e728.JPG",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -126,7 +127,7 @@ export const carddata = [
     mainCategory: "Bowls",
     p: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/51920f9c-423c-4dd3-ab84-908b706f2b5e.JPG",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -139,7 +140,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/dbd26c3e-897d-4d4b-8ab3-c2e93d7fdbfa.jpg",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -152,7 +153,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/193aac3a-f8e5-464b-8075-fb382c932026.jpg",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
   },
 
   {
@@ -165,7 +166,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/614111e2-7e40-4ce8-bedc-7075fa746ba0.JPG",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
   },
   {
     thirdPartyDescription:
@@ -177,7 +178,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/4f53d9ea-819c-4d45-97ff-278b3b9e0274.jpg",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
     egg: false,
   },
   {
@@ -190,7 +191,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/e71d5d3d-d9cc-46e0-b0ad-84bc99e677c8.jpg",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -203,7 +204,7 @@ export const carddata = [
     p: 149,
     mrp: 299,
     im: "https://d3gy1em549lxx2.cloudfront.net/51828e9b-1b09-4c49-8d32-5cd0c5b3ed90.JPG",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -216,7 +217,7 @@ export const carddata = [
     p: 149,
     mrp: 239,
     im: "https://d3gy1em549lxx2.cloudfront.net/36877413-ff0b-47be-9d13-1b22f617adf1.jpg",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
     egg: false,
   },
   {
@@ -228,7 +229,7 @@ export const carddata = [
     p: 149,
     mrp: 239,
     im: "https://d3gy1em549lxx2.cloudfront.net/1290cb16-f2b7-45fc-9bf7-059a36b82cc5.jpg",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
     egg: false,
   },
   {
@@ -241,7 +242,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/b1b781cc-8a3d-4605-b8d6-71cd0223a252.jpg",
-    ct: ["Party", "Snacking"],
+    ct: ["party", "snacking"],
     egg: false,
   },
   {
@@ -281,7 +282,7 @@ export const carddata = [
         categoryType: "COURSE",
       },
     ],
-    ct: ["Non Veg", "Burgers"],
+    ct: ["snacking","party"],
     cu: {
       i: 1,
       n: "Continental",
@@ -306,7 +307,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/8dcdcb57-b930-4952-b7b0-44fdc304a118.JPG",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
     egg: false,
   },
   {
@@ -319,7 +320,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/edba82ff-548c-4a4e-a43e-5185b26c3fdb.JPG",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
     egg: false,
   },
   {
@@ -332,7 +333,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/0148b839-6131-4046-bc7b-0351b86a94aa.jpg",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
     egg: false,
   },
   {
@@ -345,7 +346,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/1378d9ec-04b4-4e06-92e1-faef23657749.JPG",
-    ct: ["Snacking", "Party"],
+    ct: ["snacking", "party"],
     egg: false,
   },
   {
@@ -358,7 +359,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/2f57bc9b-5e59-40b8-af3d-f92fcc67be45.JPG",
-    ct: ["Party", "Snacking"],
+    ct: ["party", "snacking"],
     egg: false,
   },
   {
@@ -367,12 +368,12 @@ export const carddata = [
     i: 13738,
     t: "Iron-Man Omelette",
     shd: "Egg, Crushed Black Pepper, Cheese, Spinach and Corn,Cheese, Parsley",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/8e80ce68-16bb-4669-8cc8-6ea312d94f7c.jpg",
-    ct: ["Contains Egg", "Breakfast"],
-    egg: false,
+    ct: ["breakfast"],
+    egg: true,
   },
   {
     thirdPartyDescription:
@@ -381,21 +382,21 @@ export const carddata = [
     t: "Fresh Fruit Bowls",
     im: "https://d3gy1em549lxx2.cloudfront.net/9a64f309-8acb-468f-a31c-17291707957e.JPG",
     shd: "Watermelon, Apple, Muskmelon, Pineapple, Papaya, Pomegranate, Honey, Mint leaf",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
-    ct: ["BreakFast"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
     thirdPartyDescription:
       "Scrambled eggs, sausages tossed in a special seasoning are served alongside a hash brown. This blend isn't just perfect for starting your day, but also great to get you through your busy schedule. Order now. ENERGY 436kcal, Fat 32g, Carbs  18g, Fiber 3g,  Protein 20g",
     i: 10340,
-    t: "High Protein English Breakfast",
-    st: "High Protein English Breakfast",
+    t: "High Protein English breakfast",
+    st: "High Protein English breakfast",
     d: "Scrambled eggs, sausages tossed in a special seasoning are served alongside a hash brown. This blend isn't just perfect for starting your day, but also great to get you through your busy schedule. Order now.",
     shd: "Yellow Cheddar, Chicken Sausage, Panko Crumbs, Parsley, Black Pepper, Bell Peppers, Potato, Butter, Eggs",
-    mainCategory: "BreakFast",
+    mainCategory: ["Breakfast"],
     p: 149,
     mrp: 249,
     bsp: 149,
@@ -415,7 +416,7 @@ export const carddata = [
     c: [
       {
         id: 57,
-        name: "Breakfast",
+        name: "breakfast",
         categoryType: "COURSE",
       },
       {
@@ -429,7 +430,7 @@ export const carddata = [
         categoryType: "COURSE",
       },
     ],
-    ct: ["Breakfast", "Non Veg", "New2020"],
+    ct: ["breakfast"],
     cu: {
       i: 1,
       n: "Continental",
@@ -448,13 +449,13 @@ export const carddata = [
     thirdPartyDescription:
       "Indulge in a fusion of flavours with our chef's handcrafted dish. Enjoy pan-seared focaccia cubes, baked beans, onion tomato masala, and a vibrant veggie mix. Topped with Moroccan paneer, hashbrown, jalapenos, and fresh parsley for a culinary delight.\nEnergy 259 Kcal, Carbs 36 gms, Protein 9 gms, Fiber 5 gms, Fat 10 gms",
     i: 13375,
-    t: "Paneer Power Breakfast",
+    t: "Paneer Power breakfast",
     shd: "Pan Seared Focaccia Cubes, Baked Beans, Onion Tomato Masala, Veggie Mix, Morrocoan Paneer, Diced Hashbrown, Sliced Jalapenos, Chopped Parsley.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/13701742-72d1-4214-8e0a-dbcb7507f99f.JPG",
-    ct: ["Veg", "Breakfast"],
+    ct: [ "breakfast"],
     egg: false,
   },
   {
@@ -463,12 +464,12 @@ export const carddata = [
     i: 13106,
     t: "Creamy Egg Sausage Brekkie",
     shd: "Scrambled Eggs, Cheese, Onions, Tomato, Sausages",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/49b86753-1fdb-44ea-bf2b-f993382ee6da.jpeg",
-    ct: ["Non Veg", "Alldaybreakfast"],
-    egg: false,
+    ct: [ "breakfast"],
+    egg: true,
   },
   {
     thirdPartyDescription:
@@ -476,11 +477,11 @@ export const carddata = [
     i: 13267,
     t: "The Muscle Multiplier",
     shd: "Egg, Sub Toast, Baked Beans, Tomato Salsa, Cheese.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/f076432f-7bc9-4e02-9f19-5efadf9c6f67.jpeg",
-    ct: ["BreakFast"],
+    ct: ["breakfast"],
     egg: true,
   },
   {
@@ -489,11 +490,11 @@ export const carddata = [
     i: 13244,
     t: "The V-King",
     shd: "Spinach Corn Filling, Hash Brown, Baked Beans, Tomato Basil Salsa.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/1811b834-4c65-47d7-967d-13fecc98a9c6.jpg",
-    ct: ["BreakFast"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
@@ -502,11 +503,11 @@ export const carddata = [
     i: 13378,
     t: "Classic French Toast Combo",
     shd: "Focaccia, Milk, Egg, Banana, Apple, Papaya, Pomegranate, Pancake Syrup Drizzle, \nMint.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/095e0261-05f7-457c-a4c3-b11717c034b8.jpeg",
-    ct: ["Contains Egg", "Alldaybreakfast"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
@@ -515,11 +516,11 @@ export const carddata = [
     i: 13254,
     t: "The Sprinter",
     shd: "Spinach Corn Filling, Paneer Bhurji, Baked Beans, Tomato Basil Salad.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/781606cc-ad51-47c9-bc3c-a25a7cce9250.jpeg",
-    ct: ["BreakFast"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
@@ -528,11 +529,11 @@ export const carddata = [
     i: 13248,
     t: "The Sausagaddict",
     shd: "Egg  & Sausage Omelette, Hash Brown, Tomato Salsa, Black Pepper, Chilli Flakes, Sub Toast.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/d5bdd680-6a72-450d-92a7-92a8ebf948fa.JPG",
-    ct: ["Non Veg", "MainCourse"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
@@ -541,11 +542,11 @@ export const carddata = [
     i: 13377,
     t: "Cheese French Toast Combo",
     shd: "Focaccia, Cheese ,Milk, Egg, Banana, Apple, Papaya, Pomegranate, Pancake Syrup Drizzle, Mint.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/56c3cf9c-7ebb-4084-8017-2ff990fe181f.jpeg",
-    ct: ["BreakFast"],
+    ct: ["breakfast"],
     egg: true,
   },
   {
@@ -554,11 +555,11 @@ export const carddata = [
     i: 13308,
     t: "Super Grain Upma",
     shd: "Quinoa, Brown Rice, Wheat, Foxtail, Veggies, Ghee, Milk, lemon wedge.",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/c6742ee8-d99e-4e8e-ac2e-414bbda24e11.JPG",
-    ct: ["BreakFast"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
@@ -567,11 +568,11 @@ export const carddata = [
     i: 13242,
     t: "The NV King",
     shd: "Egg Omelette, Chicken, Baked Beans, Sausage, Black Pepper, Chilli Flakes, Sub Toast",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/9e4b36b2-08be-4dec-85ba-d6e72d60881a.JPG",
-    ct: ["BreakFast"],
+    ct: ["breakfast"],
     egg: true,
   },
   {
@@ -580,11 +581,11 @@ export const carddata = [
     i: 13250,
     t: "The Greenhouse",
     shd: "Masala Omelette, Hash Brown, Baked Beans, Spinach Corn Filling, Sub Toast",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/8106fd2e-4c9b-498b-99db-5f7034dfd859.jpeg",
-    ct: ["Alldaybreakfast", "Contains Egg"],
+    ct: ["breakfast"],
     egg: true,
   },
   {
@@ -597,7 +598,7 @@ export const carddata = [
     im: "https://d3gy1em549lxx2.cloudfront.net/8a39396c-6b61-4a80-94f2-8b1fe92bf25d.jpg",
     p: 149,
     bsp: 149,
-    ct: ["Breakfast"],
+    ct: ["breakfast"],
     egg: true,
   },
   {
@@ -606,11 +607,11 @@ export const carddata = [
     i: 13252,
     t: "The Power BF",
     shd: "Egg White Scramble, Sausage, Baked Beans, Tomato Basil, Black Pepper",
-    mainCategory: "BreakFast",
+    mainCategory: "Breakfast",
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/0d710e0d-55b9-4cf9-89f2-5bad5530a5db.JPG",
-    ct: ["Breakfast"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
@@ -636,7 +637,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/9d228cca-f4f1-4454-96c3-a510bf601da8.jpg",
-    ct: ["Lunch", "Dinner"],
+    ct: ["lunch", "dinner"],
     egg: false,
   },
   {
@@ -1022,7 +1023,7 @@ export const carddata = [
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/8059ae5c-6153-430f-8b5e-0b84cd9aabe1.jpg",
-    ct: ["Party", "Snacking"],
+    ct: ["party", "snacking"],
     egg: false,
   },
   {
@@ -1035,7 +1036,7 @@ export const carddata = [
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/b5f302fa-e2d5-43a6-ad07-56c9f0619299.JPG",
-    ct: ["Party", "Snacking", "Lunch"],
+    ct: ["party", "snacking", "lunch"],
     egg: false,
   },
   {
@@ -1048,7 +1049,7 @@ export const carddata = [
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/3c8b5e1d-6dcd-4af6-81b4-e542566570ef.JPG",
-    ct: ["Party", "Snacking", "Lunch"],
+    ct: ["party", "snacking", "lunch"],
     egg: false,
   },
   {
@@ -1074,7 +1075,7 @@ export const carddata = [
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/f3d6fff1-eb8e-4372-9786-7abb56382fc9.JPG",
-    ct: ["Party", "Dinner", "Snacking"],
+    ct: ["party", "dinner", "snacking"],
     egg: false,
   },
   {
@@ -1087,7 +1088,7 @@ export const carddata = [
     p: 79,
     bsp: 79,
     im: "https://d3gy1em549lxx2.cloudfront.net/be0709ea-742b-46fc-a15e-abdf11ef59da.jpg",
-    ct: ["Lunch", "Party"],
+    ct: ["lunch", "party"],
     egg: false,
   },
   {
@@ -1100,7 +1101,7 @@ export const carddata = [
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/3867c0c8-6e4f-441e-8972-494790ce3070.JPG",
-    ct: ["Lunch"],
+    ct: ["lunch"],
     egg: false,
   },
   {
@@ -1113,7 +1114,7 @@ export const carddata = [
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/62a7864c-54e8-4aa9-8625-5858d6972259.jpg",
-    ct: ["Party", "Snacking"],
+    ct: ["party", "snacking"],
     egg: false,
   },
 ];

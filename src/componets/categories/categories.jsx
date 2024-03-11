@@ -79,7 +79,7 @@ const Categories = () => {
       >
         {menuItems &&
           menuItems.map((item) => {
-            return <MenuItem onClick={handleClose}>{item}</MenuItem>;
+            return( <a href={`#${item}`}><MenuItem onClick={handleClose}>{item}</MenuItem></a>);
           })}
       </StyledMenu>
       {categories.map((item, idx) => {
