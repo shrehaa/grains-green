@@ -1,0 +1,9 @@
+.modal-main{
+    background-image: url('../../assets/Offer.jpg');
+    background-size: 100%;
+}
+.modal-main .inputbox{
+    margin: 15px;
+    width: 80%;
+    text-align: center;
+}
