@@ -1,0 +1,1 @@
+export const home = "https://da28cd1a-046b-4acb-ac82-4a82eee7fe4e.mock.pstmn.io/gg/home"

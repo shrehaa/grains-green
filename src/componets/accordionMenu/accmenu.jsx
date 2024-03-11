@@ -5,7 +5,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import { menuItems, carddata, categories } from "../../constants/constants";
+import { menuItems, categories } from "../../constants/constants";
 import "./accmenu.css";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -13,6 +13,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Stack from "@mui/material/Stack";
+import { home } from "../../routes";
 
 const styles = {
   cart: {
@@ -71,7 +72,19 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function CustomizedAccordions({ data }) {
   const [expanded, setExpanded] = useState([...menuItems]);
-  const [showOptions, setshowOptions] = useState(carddata);
+  const [showOptions, setshowOptions] = useState(null);
+  const [carddata, setcardata] = useState(null)
+
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
+  const fetchdata = async () => {
+    const data = await fetch(home);
+    const fdata = await data.json();
+    setshowOptions(fdata);
+    setcardata(fdata)
+  };
 
   useEffect(() => {
     if (data === "") {

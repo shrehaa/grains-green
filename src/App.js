@@ -7,9 +7,11 @@ import About from "./componets/about/about";
 import Review from "./componets/reviews/review";
 import Footer from "./componets/footer/footer";
 import CustomizedAccordions from "./componets/accordionMenu/accmenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+ 
+
   const [searchData, setsearchData] = useState("")
   return (
     <div className="App">

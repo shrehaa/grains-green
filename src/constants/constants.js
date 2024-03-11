@@ -1,19 +1,50 @@
 import src1 from "../assets/src1.jpg";
-import src2 from "../assets/src2.JPG";
-import src3 from "../assets/src3.JPG";
-import src4 from "../assets/src4.JPG";
+import src2 from "../assets/src2.jpg";
+import src3 from "../assets/src3.jpg";
+import src4 from "../assets/src4.jpg";
 import src5 from "../assets/src5.jpg";
-import src6 from "../assets/src6.JPG";
 
 export const src = [
-  { img: src1, name: "Bowls 1" },  
-  { img: src2, name: "Bowls 2" },
-  { img: src3, name: "Bowls 3" },
-  { img: src4, name: "Bowls 4" },
-  { img: src5, name: "Bowls 5" },
-  { img: src6, name: "Bowls 6" },
+  {
+    img: src1,
+    name: "Cream Mushroom Spaghetti Bowl",
+    description:
+      "Cooked pasta mixed with a silky smooth & decadent white sauce made of milk, butter and flour. White Sauce also known as Bechamel Sauce has its origin from the Italian & French Cuisines. ",
+  },
+  {
+    img: src2,
+    name: "Pepper Mushroom Wrap",
+    description:
+      "Savor the earthy and rich flavors of Pepper Mushroom Tacos, which feature tender chicken and savory mushrooms wrapped in soft tortillas. This taco experience is enhanced by the addition of crisp lettuce and a sprinkle of cheese.",
+  },
+  {
+    img: src3,
+    name: "The Greenhouse",
+    description:
+      "Not a meat lover, no problem. All the protein that you need is packed in this compact yet lavish breakfast. Masala omelette, cheesey spinach corn, baked beans and hashbrown",
+    shd: "Masala Omelette, Hash Brown, Baked Beans, Spinach Corn Filling, Sub Toast",
+  },
+  {
+    img: src4,
+    name: "Choco fudge blackout cake",
+    description:
+      "Dark chocolate sponge layered with milk chocolate truffle and dark chocolate truffles, is sure to be a perfect treat. Double layers mean double fun!",
+  },
+  {
+    img: src5,
+    name: "Moroccan Veggie Burger",
+    description:
+      "Introducing our new uniquely tall burger that will take your taste buds to the next level! This burger is stacked with chargrilled Moroccan paneer, fresh garden veggies, creamy cheese, and topped with tangy beetroot lebneh.",
+  },
 ];
-export const categories = ["All","Breakfast", "Lunch", "Dinner", "Snacking", "Party"];
+export const categories = [
+  "All",
+  "Breakfast",
+  "Lunch",
+  "Dinner",
+  "Snacking",
+  "Party",
+];
 
 export const menuItems = [
   "Breakfast",
@@ -155,7 +186,6 @@ export const carddata = [
     im: "https://d3gy1em549lxx2.cloudfront.net/193aac3a-f8e5-464b-8075-fb382c932026.jpg",
     ct: ["lunch", "dinner"],
   },
-
   {
     thirdPartyDescription:
       "From Italy with love. This classic pasta is made with everything from zucchini to mushrooms. Then mixed with creamy mushroom sauce for flavour and generous amounts of parmesan cheese. Garnished with black olives. All our meals are prepared fresh on order.\nEnergy 434 Kcal, Carbs 51 gms, Protein 13 gms, Fiber 3 gms, Fat 20 gms",
@@ -258,43 +288,9 @@ export const carddata = [
     mrp: 249,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/273fdede-1052-4958-b901-eabc545d045c.JPG",
-    lc: 2,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 26778,
-        startTime: 660,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 22,
-        name: "Non Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 43,
-        name: "Burgers",
-        categoryType: "COURSE",
-      },
-    ],
-    ct: ["snacking","party"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_peri_peri_double_chicken_burger",
-    su: "https://fmln.in/pxdFuDs",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 52],
-    sn: 9,
+
+    ct: ["snacking", "party"],
+
     egg: false,
   },
   {
@@ -325,7 +321,7 @@ export const carddata = [
   },
   {
     thirdPartyDescription:
-      '"Double your delight with our mouthwatering Double-Decker Spicy Grilled Chicken. Indulge in succulent, flavorful chicken infused with mexican spices, paired with fresh veggies, crisp lettuce, and coleslaw. Packed with protein, vitamins, fiber, and the irresistible goodness of melted cheese, it\'s a satisfying treat that satisfies cravings while providing essential nutrients.\nEnergy 484 Kcal, Carbs 35 gms, Protein 25 gms, Fiber 1 gms, Fat 29 gms"',
+      "Double your delight with our mouthwatering Double-Decker Spicy Grilled Chicken. Indulge in succulent, flavorful chicken infused with mexican spices, paired with fresh veggies, crisp lettuce, and coleslaw. Packed with protein, vitamins, fiber, and the irresistible goodness of melted cheese, it's a satisfying treat that satisfies cravings while providing essential nutrients.Energy 484 Kcal, Carbs 35 gms, Protein 25 gms, Fiber 1 gms, Fat 29 gms",
     i: 13221,
     t: "Double Decker Mexicano Chicken Burger",
     shd: "Burger Bun, Garlic Aioli, Peri Peri Chicken Strips, Tomato Relish, Olives, Cheese Slice.",
@@ -338,7 +334,7 @@ export const carddata = [
   },
   {
     thirdPartyDescription:
-      "Experience the flavour of freshly baked soft burger buns stuffed with a layer of spicy birds eye paneer, fresh lettuce, thinly sliced onion, and juicy tomato. The other layer has a tonne of gooey cheese, tangy mustard sauce, and crunchy coleslaw that will make you want more. Get ready to enjoy this delicious burger on your own -- you won't want to share!\nEnergy 529 Kcal, Carbs 48 gms, Protein 21 gms, Fiber 3 gms, Fat 29 gms",
+      "Experience the flavour of freshly baked soft burger buns stuffed with a layer of spicy birds eye paneer, fresh lettuce, thinly sliced onion, and juicy tomato. The other layer has a tonne of gooey cheese, tangy mustard sauce, and crunchy coleslaw that will make you want more. Get ready to enjoy this delicious burger on your own -- you won't want to share!Energy 529 Kcal, Carbs 48 gms, Protein 21 gms, Fiber 3 gms, Fat 29 gms",
     i: 13314,
     t: "Double Decker Bird Eye Paneer Burger",
     shd: "Burger Bun, Veg Pattie, Peri Peri Bird's Eye Paneer, Mixed Lettuce, Slaw, Olives, Cheese",
@@ -393,56 +389,14 @@ export const carddata = [
       "Scrambled eggs, sausages tossed in a special seasoning are served alongside a hash brown. This blend isn't just perfect for starting your day, but also great to get you through your busy schedule. Order now. ENERGY 436kcal, Fat 32g, Carbs  18g, Fiber 3g,  Protein 20g",
     i: 10340,
     t: "High Protein English breakfast",
-    st: "High Protein English breakfast",
-    d: "Scrambled eggs, sausages tossed in a special seasoning are served alongside a hash brown. This blend isn't just perfect for starting your day, but also great to get you through your busy schedule. Order now.",
-    shd: "Yellow Cheddar, Chicken Sausage, Panko Crumbs, Parsley, Black Pepper, Bell Peppers, Potato, Butter, Eggs",
-    mainCategory: ["Breakfast"],
+
     p: 149,
     mrp: 249,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/8ff101f1-3656-48d0-a694-a0af13763a1d.JPG",
-    lc: 50,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 20920,
-        startTime: 445,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 57,
-        name: "breakfast",
-        categoryType: "COURSE",
-      },
-      {
-        id: 22,
-        name: "Non Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 154,
-        name: "New2020",
-        categoryType: "COURSE",
-      },
-    ],
+
     ct: ["breakfast"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_high_protein_english_breakfast",
-    su: "https://fmln.in/pxmfmGW",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 52],
-    sn: 10,
+
     egg: false,
   },
   {
@@ -455,7 +409,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/13701742-72d1-4214-8e0a-dbcb7507f99f.JPG",
-    ct: [ "breakfast"],
+    ct: ["breakfast"],
     egg: false,
   },
   {
@@ -468,7 +422,7 @@ export const carddata = [
     p: 149,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/49b86753-1fdb-44ea-bf2b-f993382ee6da.jpeg",
-    ct: [ "breakfast"],
+    ct: ["breakfast"],
     egg: true,
   },
   {
@@ -590,7 +544,7 @@ export const carddata = [
   },
   {
     thirdPartyDescription:
-      "The Coach breakfast, the new way to start your day. A protein rich sausage and egg scramble, Hashbrown, sour cream and tomato basil salad \nEnergy 353 Kcal, Carbs 24 gms, Protein 13 gms, Fiber 1 gms, Fat 23 gms",
+      "The Coach breakfast, the new way to start your day. A protein rich sausage and egg scramble, Hashbrown, sour cream and tomato basil salad.Energy 353 Kcal, Carbs 24 gms, Protein 13 gms, Fiber 1 gms, Fat 23 gms",
     i: 13256,
     t: "The Coach",
     shd: "Sausage and Egg Scramble, Hash Brown, Sour Cream, Tomato Basil Salad",
@@ -645,50 +599,15 @@ export const carddata = [
       "This hearty, refreshing salad is all you need this summer. Diced cucumber, tomatoes, jalapeno, olives, roasted corn, kidney beans are tossed with lettuce and seasoned to perfection. Served with cumin-vinaigrette dressing.\nEnergy 239 Kcal, Carbs 46 gms, Protein 9 gms, Fiber 8 gms, Fat 4 gms",
     i: 13351,
     t: "Mini Corn Cucumber Bean Salad",
-    st: "Mini Corn Cucumber Bean Salad",
-    d: "This hearty, refreshing salad is all you need this summer. Diced cucumber, tomatoes, jalapeno, olives, roasted corn, kidney beans are tossed with lettuce and seasoned to perfection. Served with cumin-vinaigrette dressing.",
+
     shd: "Sweet Corn, Kidney beans, cucumber, tomato, Purple cabbage, jalapeno, olives, lettuce, cumin vinaigrette dressing",
     mainCategory: "Salads",
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/2503da8c-8e44-4462-85f4-da3ce1a09089.JPG",
-    lc: 0,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 28316,
-        startTime: 660,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 26,
-        name: "Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 44,
-        name: "Salads",
-        categoryType: "COURSE",
-      },
-    ],
+
     ct: ["Veg", "Salads"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_mini_corn_cucumber_bean_salad",
-    su: "https://fmln.in/pxmemB5",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 50, 51],
-    sn: 8,
+
     egg: false,
   },
   {
@@ -696,51 +615,16 @@ export const carddata = [
       "A Turkish delight of grilled paneer, roasted root vegetables, red onion, tomato and assorted peppers, topped with crunchy, tangy pomegrante, olives and Gouda cheese dressing\nEnergy 373 Kcal, Fat 21 gms, Carbs 26 gms, Fiber 9 gms, Protein 20 gms",
     i: 12891,
     t: "Turkish Cottage Cheese And Chickpea Salad",
-    st: "Turkish Cottage Cheese And Chickpea Salad",
-    d: "A Turkish delight of grilled paneer, roasted root vegetables, red onion, tomato and assorted peppers, topped with crunchy, tangy pomegrante, olives and Gouda cheese dressing",
+
     shd: "Grilled paneer, Roasted Root veg, Tri bellpepprs, Mixed Lettuce, Onion, Tomato, Cucumber, Garbanzo beans, Pomegrante, Black Olives, Corriander leaf, Gouda cheese dressing",
     mainCategory: "Salads",
     p: 149,
     mrp: 299,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/4c7e5f4c-2c42-4d7a-9c18-fa5892c632c6.jpg",
-    lc: 6,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 27600,
-        startTime: 660,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 26,
-        name: "Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 44,
-        name: "Salads",
-        categoryType: "COURSE",
-      },
-    ],
+
     ct: ["Veg", "Salads"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_turkish_cottage_cheese_and_chickpea_salad",
-    su: "https://fmln.in/pxmelkE",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 50, 51],
-    sn: 9,
+
     egg: false,
   },
   {
@@ -748,51 +632,16 @@ export const carddata = [
       "Nothing but the best combination of Citrus spiced peri-peri grilled chicken with all farm fresh veggies, lettuce, beans and smokey spicy barbeque dressing\nEnergy 470 Kcal, Fat 18 gms, Carbs 31 gms, Fiber 2 gms, Protein 46 gms",
     i: 12894,
     t: "Peri Peri Chicken Salad",
-    st: "Peri Peri Chicken Salad",
-    d: "Nothing but the best combination of Citrus spiced peri-peri grilled chicken with all farm fresh veggies, lettuce, beans and smokey spicy barbeque dressing",
+
     shd: "Peri peri chicken, Kidneybean, Cherry tomato, Mixed Lettuce, Onion, Tomato, Cucumber, Garbanzo beans, Processed cheese, Jalapeno, Chopped parsley, Peri-peri bbq Dressing",
     mainCategory: "Salads",
     p: 149,
     mrp: 299,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/32eae582-e319-4acf-89ee-07d4a9407205.JPG",
-    lc: 3,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 27603,
-        startTime: 660,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 22,
-        name: "Non Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 44,
-        name: "Salads",
-        categoryType: "COURSE",
-      },
-    ],
+
     ct: ["Non Veg", "Salads"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_peri_peri_chicken_salad",
-    su: "https://fmln.in/pxmelrT",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 52],
-    sn: 10,
+
     egg: false,
   },
   {
@@ -800,51 +649,16 @@ export const carddata = [
       "This salad is a delightful combination of fresh ingredients that will satisfy your cravings for a healthy and flavorful meal. Enjoy a refreshing mix of mixed lettuce, blanched diced carrots, and broccoli, complemented by sautéed mushrooms and the tangy goodness of feta cheese and its a perfect winter treat that will tantalize your taste buds.\nEnergy 170 Kcal, Carbs 18 gms, Protein 5 gms, Fiber 5 gms, Fat 10 gms",
     i: 13396,
     t: "Moroccan Veggie Salad",
-    st: "Moroccan Veggie Salad",
-    d: "This salad is a delightful combination of fresh ingredients that will satisfy your cravings for a healthy and flavorful meal. Enjoy a refreshing mix of mixed lettuce, blanched diced carrots, and broccoli, complemented by sautéed mushrooms and the tangy goodness of feta cheese and its a perfect winter treat that will tantalize your taste buds.",
+
     shd: "Mixed Lettuce, Blanched Diced Carrots, Blanched Broccoli, Sauteed Mushroom, Chopped Parsley, Feta Cheese, Ginger Coriander Vinaigrette Dressing, Roasted Cumin Powder",
     mainCategory: "Salads",
     p: 149,
     mrp: 299,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/9a1648ef-4d74-42ee-aa7c-54e670dfecce.JPG",
-    lc: 3,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 28374,
-        startTime: 660,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 26,
-        name: "Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 44,
-        name: "Salads",
-        categoryType: "COURSE",
-      },
-    ],
+
     ct: ["Veg", "Salads"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_moroccan_veggie_salad",
-    su: "https://fmln.in/pxhmlOc",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 50, 51],
-    sn: 11,
+
     egg: false,
   },
   {
@@ -852,50 +666,15 @@ export const carddata = [
       "Juicy grilled chicken dices get fancied up with the exotic and mesmerizing taste of bbq sauce. This delectable salad comes with all the locally sourced fresh veggies, scrumptious servings of kidney beans, grilled chicken, assorted hand-torn lettuce with herbs, all tossed in a cumin vinaigrette dressing. A perfect one-dish meal that you will love! Energy 311 Kcal, Fat 15.8 gms, Carbs 29 gms, Fiber 7.7 gms, Protein 16.6 gms.",
     i: 13353,
     t: "Mini BBQ-ed Chicken Salad",
-    st: "Mini BBQ-ed Chicken Salad",
-    d: "Juicy grilled chicken dices get fancied up with the exotic and mesmerizing taste of bbq sauce. This delectable salad comes with all the locally sourced fresh veggies, scrumptious servings of kidney beans, grilled chicken, assorted hand-torn lettuce with herbs, all tossed in a cumin vinaigrette dressing. A perfect one-dish meal that you will love!",
+
     shd: "Chicken dices, cucumber, sweet corn, tomato, black olives, jalapeno, parsley, hebs, lettuce, red rajma bean, bbq sauce",
     mainCategory: "Salads",
     p: 99,
     bsp: 99,
     im: "https://d3gy1em549lxx2.cloudfront.net/83c96326-ad21-47e9-ab0b-ce246f9ecdfd.JPG",
-    lc: 3,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 28318,
-        startTime: 660,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 22,
-        name: "Non Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 44,
-        name: "Salads",
-        categoryType: "COURSE",
-      },
-    ],
+
     ct: ["Non Veg", "Salads"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_mini_bbq_ed_chicken_salad",
-    su: "https://fmln.in/pxgysDY",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 52],
-    sn: 12,
+
     egg: false,
   },
   {
@@ -903,56 +682,21 @@ export const carddata = [
       "This Mexican-inspired delight is a burst of flavors. Indulge in a vibrant and delectable salad with mixed lettuce, cucumber, and tomatoes. Savor the richness of boiled rajma and the boldness of peri peri pulled chicken. Topped with cherry tomatoes, zesty tomato salsa, cheese, and creamy Thousand Island dressing, providing both body and soul with a nourishing experience.\nEnergy 269 Kcal, Carbs 12 gms, Protein 13 gms, Fiber 3 gms, Fat 20 gms",
     i: 13413,
     t: "BBQ Ranch Chicken Salad",
-    st: "BBQ Ranch Chicken Salad",
-    d: "This Mexican-inspired delight is a burst of flavors. Indulge in a vibrant and delectable salad with mixed lettuce, cucumber, and tomatoes. Savor the richness of boiled rajma and the boldness of peri peri pulled chicken. Topped with cherry tomatoes, zesty tomato salsa, cheese, and creamy Thousand Island dressing, providing both body and soul with a nourishing experience.",
+
     shd: "Mixed Lettuce, Diced Onions, Diced Tomatoes, Diced Bell Peppers, Pulled Peri Peri Chicken in BBQ Sauce, Chopped Parsley, Sliced Jalapenos, Ceaser Deressing",
     mainCategory: "Salads",
     p: 149,
     mrp: 299,
     bsp: 149,
     im: "https://d3gy1em549lxx2.cloudfront.net/5b170a30-f13e-4312-bd37-580d455bd7bc.JPG",
-    lc: 1,
-    il: false,
-    ia: true,
-    ica: false,
-    pdt: [
-      {
-        id: 28391,
-        startTime: 660,
-        endTime: 1438,
-        mdt: 45,
-      },
-    ],
-    c: [
-      {
-        id: 22,
-        name: "Non Veg",
-        categoryType: "COURSE",
-      },
-      {
-        id: 44,
-        name: "Salads",
-        categoryType: "COURSE",
-      },
-    ],
+
     ct: ["Non Veg", "Salads"],
-    cu: {
-      i: 1,
-      n: "Continental",
-    },
-    iv: true,
-    slg: "continental_bbq_ranch_chicken_salad",
-    su: "https://fmln.in/pxhmmuF",
-    bds: [],
-    flts: ["A_N"],
-    at: "ADD_TO_CART",
-    fi: [102, 52],
-    sn: 16,
+
     egg: false,
   },
   {
     thirdPartyDescription:
-      "We give the ultimate comfort food a creamy, garlicky spin, making it even more delectable. Topped off with cream, butter and a good sprinkle of fresh parsley, our Roasted Garlic Chicken Soup is what will perk you up even if you aren’t ill.\nEnergy 490 Kcal, Fat 33 gms, Carbs 17 gms, Fiber 3 gms, Protein 31 gms.",
+      "We give the ultimate comfort food a creamy, garlicky spin, making it even more delectable. Topped off with cream, butter and a good sprinkle of fresh parsley, our Roasted Garlic Chicken Soup is what will perk you up even if you aren't ill.\nEnergy 490 Kcal, Fat 33 gms, Carbs 17 gms, Fiber 3 gms, Protein 31 gms.",
     i: 2114,
     t: "Roasted Garlic Chicken Soup",
     shd: "Chicken, Garlic, Leek, Béchamel, Thyme, Carrot, Celery",
