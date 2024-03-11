@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -69,9 +69,17 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function CustomizedAccordions() {
+export default function CustomizedAccordions({ data }) {
   const [expanded, setExpanded] = useState([...menuItems]);
   const [showOptions, setshowOptions] = useState(carddata);
+
+  useEffect(() => {
+    if (data === "") {
+      setshowOptions(carddata);
+      return;
+    }
+    filterContent(carddata, data.toLowerCase(), "t");
+  }, [data]);
 
   const handleChange = (panel) => (event, newExpanded) => {
     var array = expanded;
@@ -91,9 +99,15 @@ export default function CustomizedAccordions() {
     return expanded && expanded.includes(panel);
   };
 
-  const filterContent = (arr, fil) => {
+  const filterContent = (arr, fil, cat) => {
+    if (fil === "all") {
+      setshowOptions(carddata);
+      return;
+    }
     var data = arr.filter((item) => {
-      return item.ct && item.ct.includes(fil);
+      if (typeof item[`${cat}`] === "string")
+        return item[`${cat}`] && item[`${cat}`].toLowerCase().includes(fil);
+      else return item[`${cat}`] && item[`${cat}`].includes(fil);
     });
     setshowOptions(data);
   };
@@ -105,7 +119,7 @@ export default function CustomizedAccordions() {
         {categories.map((item) => {
           return (
             <Button
-              onClick={() => filterContent(carddata, item.toLowerCase())}
+              onClick={() => filterContent(carddata, item.toLowerCase(), "ct")}
               className="filter-btn"
               variant="contained"
             >

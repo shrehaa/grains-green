@@ -13,7 +13,7 @@ export const src = [
   { img: src5, name: "Bowls 5" },
   { img: src6, name: "Bowls 6" },
 ];
-export const categories = ["Breakfast", "Lunch", "Dinner", "Snacking", "Party"];
+export const categories = ["All","Breakfast", "Lunch", "Dinner", "Snacking", "Party"];
 
 export const menuItems = [
   "Breakfast",

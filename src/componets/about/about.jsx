@@ -27,15 +27,26 @@ const About = () => {
           <h2>Welcome you!</h2>
           <h1>About Grains & Greens</h1>
           <p>
-            THE PIONEERS OF DELIVERING OLD TRADITIONAL STREET FOOD DELICACIES
-            RIGHT FROM THE AUTHENTIC & ORIGINAL SOURCES OF OLD DELHI AT YOUR
-            DOOR STEPS.
+            When we say good, we don’t just mean good food. We also mean the
+            goodness that good food leads to. Good memories, a good temper, a
+            good day, a good burp. And we know that when our food leaves our
+            kitchens, we’re creating all that. It’s rewarding, this belief in
+            good. Now take a look at how we go about it.
           </p>
-          <p>
-            The old city shares an intimate relationship with food, one that was
-            founded during the Mughal Era. Here, traditions rule and history is
-            served sumptuously garnished with culinary secrets that have been
-            passed down through generations.
+          <p style={{ marginTop: "25px" }}>
+            <ul
+              style={{
+                display: "flex",
+                fontSize: "16px",
+                marginLeft: "10px",
+                fontWeight: "bold",
+              }}
+            >
+              <li>World Cuisine</li>
+              <li>Daily - Changing Menu</li>
+              <li>Farm - Fresh Ingredients</li>
+              <li>Highly Expirienced Chefs</li>
+            </ul>
           </p>
         </div>
         <div className="image-container">

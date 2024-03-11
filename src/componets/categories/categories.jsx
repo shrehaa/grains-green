@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { styled, alpha } from "@mui/material/styles";
 import { categories, menuItems } from "../../constants/constants";
 import "./categories.css";
+import search from "../../assets/search.png";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -47,8 +49,9 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-const Categories = () => {
+const Categories = ({getdata}) => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [sval, setsval] = useState("");
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -56,8 +59,16 @@ const Categories = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+ 
+
+  const handleSearch=()=>{
+   getdata(sval);
+  }
+
   return (
     <div className="categories-container">
+      <div className="all-cat">
       <Button
         id="fade-button"
         aria-controls={open ? "fade-menu" : undefined}
@@ -82,13 +93,20 @@ const Categories = () => {
             return( <a href={`#${item}`}><MenuItem onClick={handleClose}>{item}</MenuItem></a>);
           })}
       </StyledMenu>
-      {categories.map((item, idx) => {
-        return (
-          <div className="items" key={idx}>
-            {item}
-          </div>
-        );
-      })}
+      </div>
+      <div className="search-container">
+          <input
+            className="searchbox"
+            placeholder="Enter cusine, resturant or mood"
+            name="search"
+            value={sval}
+            onChange={(e)=>setsval(e.target.value)}
+          />
+          <img className="searchicon" alt="search" src={search} onClick={handleSearch} />
+        </div>
+        <div className="cart-container">
+          <AddShoppingCartIcon sx={{height:"40px",width:"40px", cursor:"pointer",marginTop:"5px"}}/>
+        </div>
     </div>
   );
 };

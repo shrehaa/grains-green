@@ -7,39 +7,20 @@
   background-color: #fff;
 }
 .navbarcontainer .logocontainer {
-  width: 70%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.navbarcontainer .searchbox {
-  width: 350px;
-  height: 40px;
-  text-align: center;
-  font-size: 15px;
-  margin-top: 10px;
-  border: 2px solid darkgray;
-  border-radius: 10px;
-  margin-left: 90px;
-}
-.navbarcontainer .searchbox:focus {
-  outline: none;
-}
-.navbarcontainer .searchicon {
-  height: 26px;
-  width: 20px;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-top: 5px;
-  padding-top: 7px;
-}
+
 .navbarcontainer .logocontainer .logo {
   height: 150px;
   width: 200px;
 }
 
 .navbarcontainer .credentials {
-  margin-left: 60px;
+  width: 70%;
+  text-align: end;
 }
 .navbarcontainer .credentials .cred-btn {
   margin: 10px;
