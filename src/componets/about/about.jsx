@@ -33,7 +33,7 @@ const About = () => {
             kitchens, we’re creating all that. It’s rewarding, this belief in
             good. Now take a look at how we go about it.
           </p>
-          <p style={{ marginTop: "25px" }}>
+          <div style={{ marginTop: "25px" }}>
             <ul
               style={{
                 display: "flex",
@@ -47,7 +47,7 @@ const About = () => {
               <li>Farm - Fresh Ingredients</li>
               <li>Highly Expirienced Chefs</li>
             </ul>
-          </p>
+          </div>
         </div>
         <div className="image-container">
           <ImageList

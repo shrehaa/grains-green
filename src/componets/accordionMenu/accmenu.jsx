@@ -73,7 +73,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function CustomizedAccordions({ data }) {
   const [expanded, setExpanded] = useState([...menuItems]);
   const [showOptions, setshowOptions] = useState(null);
-  const [carddata, setcardata] = useState(null)
+  const [carddata, setcardata] = useState(null);
 
   useEffect(() => {
     fetchdata();
@@ -83,7 +83,7 @@ export default function CustomizedAccordions({ data }) {
     const data = await fetch(home);
     const fdata = await data.json();
     setshowOptions(fdata);
-    setcardata(fdata)
+    setcardata(fdata);
   };
 
   useEffect(() => {
@@ -129,68 +129,70 @@ export default function CustomizedAccordions({ data }) {
     <div className="menu-container">
       <h2>Mouth Watering healthy food from the Greens 🌳</h2>
       <Stack className="stack" direction="row" spacing={2}>
-        {categories.map((item) => {
+        {categories.map((item, idx) => {
           return (
             <Button
               onClick={() => filterContent(carddata, item.toLowerCase(), "ct")}
               className="filter-btn"
               variant="contained"
+              key={idx}
             >
               {item}
             </Button>
           );
         })}
       </Stack>
-      {menuItems.map((food, idx) => {
-        return (
-          <Accordion
-            expanded={handleExpand(food)}
-            onChange={handleChange(food)}
-            key={idx}
-            id={food}
-          >
-            <AccordionSummary
-              aria-controls="panel1d-content"
-              id="panel1d-header"
+      {menuItems &&
+        menuItems.map((food, idx) => {
+          return (
+            <Accordion
+              expanded={handleExpand(food)}
+              onChange={handleChange(food)}
+              key={idx}
+              id={food}
             >
-              <Typography>{food}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <div className="menu-cards">
-                {showOptions &&
-                  showOptions.map((item) => {
-                    if (item.mainCategory === food) {
-                      return (
-                        <div>
-                          <Card className="cart" key={item.i}>
-                            <CardMedia
-                              component="img"
-                              alt="green iguana"
-                              height="150px"
-                              image={item.im}
-                            />
-                            <CardContent>
-                              <h3 gutterBottom color="green" component="div">
-                                {item.t}
-                              </h3>
+              <AccordionSummary
+                aria-controls="panel1d-content"
+                id="panel1d-header"
+              >
+                <Typography>{food}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className="menu-cards">
+                  {showOptions &&
+                    showOptions.map((item) => {
+                      if (item.mainCategory === food) {
+                        return (
+                          <div>
+                            <Card className="cart" key={item.i}>
+                              <CardMedia
+                                component="img"
+                                alt="green iguana"
+                                height="150px"
+                                image={item.im}
+                              />
+                              <CardContent>
+                                <h3 color="green" component="div">
+                                  {item.t}
+                                </h3>
 
-                              <h2>₹ {item.p}</h2>
-                            </CardContent>
-                            <CardActions>
-                              <Button sx={styles.cart} size="small">
-                                Add
-                              </Button>
-                            </CardActions>
-                          </Card>
-                        </div>
-                      );
-                    }
-                  })}
-              </div>
-            </AccordionDetails>
-          </Accordion>
-        );
-      })}
+                                <h2>₹ {item.p}</h2>
+                              </CardContent>
+                              <CardActions>
+                                <Button sx={styles.cart} size="small">
+                                  Add
+                                </Button>
+                              </CardActions>
+                            </Card>
+                          </div>
+                        );
+                      }
+                    })}
+                </div>
+              </AccordionDetails>
+            </Accordion>
+          );
+        })}
     </div>
   );
 }

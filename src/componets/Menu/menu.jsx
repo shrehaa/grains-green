@@ -61,7 +61,7 @@ const Menu = () => {
                   image={item.im}
                 />
                 <CardContent>
-                  <h3 gutterBottom color="green" component="div">
+                  <h3 color="green" component="div">
                     {item.t}
                   </h3>
 

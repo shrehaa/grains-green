@@ -1,7 +1,7 @@
 import src1 from "../assets/src1.jpg";
-import src2 from "../assets/src2.JPG";
-import src3 from "../assets/src3.JPG";
-import src4 from "../assets/src4.JPG";
+import src2 from "../assets/src2.jpg";
+import src3 from "../assets/src3.jpg";
+import src4 from "../assets/src4.jpg";
 import src5 from "../assets/src5.jpg";
 
 export const src = [

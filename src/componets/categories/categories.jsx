@@ -6,7 +6,7 @@ import { styled, alpha } from "@mui/material/styles";
 import { categories, menuItems } from "../../constants/constants";
 import "./categories.css";
 import search from "../../assets/search.png";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -49,7 +49,7 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-const Categories = ({getdata}) => {
+const Categories = ({ getdata }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [sval, setsval] = useState("");
   const open = Boolean(anchorEl);
@@ -60,53 +60,67 @@ const Categories = ({getdata}) => {
     setAnchorEl(null);
   };
 
- 
-
-  const handleSearch=()=>{
-   getdata(sval);
-  }
+  const handleSearch = () => {
+    getdata(sval);
+  };
 
   return (
     <div className="categories-container">
       <div className="all-cat">
-      <Button
-        id="fade-button"
-        aria-controls={open ? "fade-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-        className="menu-btn"
-      >
-        All Categories
-      </Button>
-      <StyledMenu
-        id="demo-customized-menu"
-        MenuListProps={{
-          "aria-labelledby": "demo-customized-button",
-        }}
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-      >
-        {menuItems &&
-          menuItems.map((item) => {
-            return( <a href={`#${item}`}><MenuItem onClick={handleClose}>{item}</MenuItem></a>);
-          })}
-      </StyledMenu>
+        <Button
+          id="fade-button"
+          aria-controls={open ? "fade-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          onClick={handleClick}
+          className="menu-btn"
+        >
+          All Categories
+        </Button>
+        <StyledMenu
+          id="demo-customized-menu"
+          MenuListProps={{
+            "aria-labelledby": "demo-customized-button",
+          }}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+        >
+          {menuItems &&
+            menuItems.map((item, idx) => {
+              return (
+                <a key={idx} href={`#${item}`}>
+                  <MenuItem onClick={handleClose}>{item}</MenuItem>
+                </a>
+              );
+            })}
+        </StyledMenu>
       </div>
       <div className="search-container">
-          <input
-            className="searchbox"
-            placeholder="Enter cusine, resturant or mood"
-            name="search"
-            value={sval}
-            onChange={(e)=>setsval(e.target.value)}
-          />
-          <img className="searchicon" alt="search" src={search} onClick={handleSearch} />
-        </div>
-        <div className="cart-container">
-          <AddShoppingCartIcon sx={{height:"40px",width:"40px", cursor:"pointer",marginTop:"5px"}}/>
-        </div>
+        <input
+          className="searchbox"
+          placeholder="Enter cusine, resturant or mood"
+          name="search"
+          value={sval}
+          onChange={(e) => setsval(e.target.value)}
+        />
+        <img
+          className="searchicon"
+          alt="search"
+          src={search}
+          onClick={handleSearch}
+        />
+      </div>
+      <div className="cart-container">
+        <AddShoppingCartIcon
+          sx={{
+            height: "40px",
+            width: "40px",
+            cursor: "pointer",
+            marginTop: "5px",
+          }}
+        />
+      </div>
     </div>
   );
 };
