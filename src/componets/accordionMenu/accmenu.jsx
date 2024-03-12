@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -70,15 +70,19 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function CustomizedAccordions({ data }) {
+export default function CustomizedAccordions({ setCartItems, data }) {
   const [expanded, setExpanded] = useState([...menuItems]);
   const [showOptions, setshowOptions] = useState(null);
   const [carddata, setcardata] = useState(null);
-  
+  const [cartArray, setcartArray] = useState([]);
 
   useEffect(() => {
     fetchdata();
   }, []);
+
+  useEffect(()=>{
+    setCartItems(cartArray)
+  },[cartArray])
 
   const fetchdata = async () => {
     const data = await fetch(home);
@@ -180,9 +184,31 @@ export default function CustomizedAccordions({ data }) {
                                 <h2>₹ {item.p}</h2>
                               </CardContent>
                               <CardActions>
-                                <Button sx={styles.cart} size="small">
-                                  Add
-                                </Button>
+                                {!cartArray.includes(item) ? (
+                                  <Button
+                                    onClick={() =>
+                                      setcartArray([...cartArray, item])
+                                    }
+                                    sx={styles.cart}
+                                    size="small"
+                                  >
+                                    Add
+                                  </Button>
+                                ) : (
+                                  <Button
+                                    onClick={() =>
+                                      setcartArray(
+                                        cartArray.filter(
+                                          (cur) => cur.i !== item.i
+                                        )
+                                      )
+                                    }
+                                    sx={styles.cart}
+                                    size="small"
+                                  >
+                                    Remove
+                                  </Button>
+                                )}
                               </CardActions>
                             </Card>
                           </div>

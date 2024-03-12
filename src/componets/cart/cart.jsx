@@ -17,6 +17,7 @@ const cartstyle = {
 
 const boxStyle = {
   display: "flex",
+  margin:"12px"
 };
 
 const imgBox = {
@@ -32,6 +33,7 @@ const textBox = {
 };
 
 const Cart = ({ open, handleClose, cartData }) => {
+  console.log(cartData, "dataaaaaaaaa")
   const [itemNum, setItemNum] = useState(1);
 
   const subtract = () => {
@@ -46,16 +48,18 @@ const Cart = ({ open, handleClose, cartData }) => {
         <h1>Cart</h1>
         <ClearIcon style={{ cursor: "pointer" }} onClick={handleClose} />
       </Box>
-      <Box sx={boxStyle}>
+      {cartData && cartData.length>0 ?cartData.map(item=>{
+        return(
+            <Box key={item.i} sx={boxStyle}>
         <Box sx={imgBox}>
           <img
-            src="https://d3gy1em549lxx2.cloudfront.net/ec24e1f3-a5ae-449a-b79f-930cbc5ed7bd.JPG"
+            src={item.im}
             height="100%"
             width="100%"
           ></img>
         </Box>
         <Box sx={textBox}>
-          <h3 style={{ marginBottom: "50px" }}>Paneer Power breakfast</h3>
+          <h3 style={{ marginBottom: "50px" }}>{item.t}</h3>
           <div className="textCont">
             <div className="counter">
               <Button onClick={subtract} sx={{ color: "black" }}>
@@ -73,11 +77,13 @@ const Cart = ({ open, handleClose, cartData }) => {
               <label>
                 <CurrencyRupeeIcon fontSize="small" />
               </label>
-              <p>{1200 * itemNum}</p>
+              <p>{item.p * itemNum}</p>
             </div>
           </div>
         </Box>
       </Box>
+        )
+      }): <h2 style={{margin:"35px"}}> OOPS! Cart is empty</h2>}
     </Drawer>
   );
 };

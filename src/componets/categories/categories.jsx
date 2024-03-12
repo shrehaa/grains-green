@@ -50,7 +50,7 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-const Categories = ({ getdata }) => {
+const Categories = ({ getdata, cartItems }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [sval, setsval] = useState("");
   const open = Boolean(anchorEl);
@@ -122,7 +122,7 @@ const Categories = ({ getdata }) => {
         />
       </div>
       <div className="cart-container">
-        <Cart open={openCart} handleClose={handleCartClose} />
+        <Cart open={openCart} handleClose={handleCartClose} cartData={cartItems}/>
         <AddShoppingCartIcon
           sx={{
             height: "40px",
@@ -132,19 +132,19 @@ const Categories = ({ getdata }) => {
           }}
           onClick={handleCartOpen}
         />
-        
-        
-        <label style={{
-        borderRadius:"50%",
-        backgroundColor:"red",
-        marginBottom:"20px",
-        fontSize:"20px",
-        padding:"3px"
 
-
-      }}>7</label>
+        {cartItems.length>0?<label
+          style={{
+            borderRadius: "50%",
+            backgroundColor: "red",
+            marginBottom: "20px",
+            fontSize: "20px",
+            padding: "3px",
+          }}
+        >
+          {cartItems.length}
+        </label>:null}
       </div>
-      
     </div>
   );
 };
