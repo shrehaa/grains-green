@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -21,13 +21,12 @@ const style = {
   textAlign: "center",
 };
 
-function Login({ open, handleClose, type }) {
+function Login({ open, handleClose, type, setLoggedIn }) {
   const [emailR, setmailR] = useState("");
   const [passwordR, setpasswordR] = useState("");
-  const localSignUp = localStorage.getItem("signUp");
-  const localEmail = localStorage.getItem("email");
+  const loggedin = localStorage.getItem("loggedin");
+  const localEmail = localStorage.getItem("username");
   const localPassword = localStorage.getItem("password");
-  const localName = localStorage.getItem("name");
 
   const handleuserChange = (e) => {
     setmailR(e.target.value);
@@ -36,32 +35,37 @@ function Login({ open, handleClose, type }) {
   const handlePassChange = (e) => {
     setpasswordR(e.target.value);
   };
-  const handlecalls = (type) =>{
-    if(type==="Login"){
-        handleSignIn();
-    }
-    else
-    handleClick();
-  }
-  const handleClick = () => {
-    console.log(emailR, passwordR);
-    if (emailR !== "" && passwordR !== "") {
-      localStorage.setItem("username", emailR);
-      localStorage.setItem("password", passwordR);
-      localStorage.setItem("signUp", emailR);
-      alert("Account created successfully!! Now please Sign In");
-      window.location.reload();
+  const handlecalls = (type) => {
+    setmailR("");
+    setpasswordR("");
+
+    if (type.toLowerCase() === "sign up") {
+      handleSignUp();
+    } else {
+      handleSignIn();
     }
   };
 
-  const handleSignIn=()=>{
-    if(emailR==localEmail&&passwordR==localPassword){
-        localStorage.setItem("signUp",emailR)
-        window.location.reload()
-    }else{
-        alert("Please Enter valid Credential")
+  const handleSignUp = () => {
+    if (emailR !== "" && passwordR !== "") {
+      localStorage.setItem("username", emailR);
+      localStorage.setItem("password", passwordR);
+      localStorage.setItem("loggedin", false);
+      handleClose();
+      alert("Account created successfully!! Now please Sign In");
     }
-   }
+  };
+
+  const handleSignIn = () => {
+    if (emailR == localEmail && passwordR == localPassword) {
+      localStorage.setItem("loggedin", true);
+      setLoggedIn(true);
+      handleClose();
+      window.location.reload();
+    } else {
+      alert("Please Enter valid Credential");
+    }
+  };
 
   return (
     <div>
@@ -115,7 +119,7 @@ function Login({ open, handleClose, type }) {
                 "&:hover": { backgroundColor: "#2f6a34" },
               }}
               variant="contained"
-              onClick={handlecalls(type)}
+              onClick={() => handlecalls(type)}
             >
               {type}
             </Button>
