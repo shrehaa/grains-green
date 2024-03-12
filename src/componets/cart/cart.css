@@ -1,0 +1,19 @@
+.textCont {
+  display: flex;
+  justify-content: space-between;
+}
+.counter {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+.val {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.val p {
+  font-size: 18px;
+  margin-top: 0px;
+}

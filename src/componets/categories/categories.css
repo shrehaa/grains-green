@@ -60,10 +60,9 @@
 .categories-container .menu-expand {
   background-color: lightskyblue !important;
 }
-.categories-container .cart-container{
+.categories-container .cart-container {
   width: 20%;
   text-align: end;
   color: #fff;
   margin-right: 20px;
-
 }

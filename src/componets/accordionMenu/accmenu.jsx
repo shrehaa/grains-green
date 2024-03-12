@@ -74,6 +74,7 @@ export default function CustomizedAccordions({ data }) {
   const [expanded, setExpanded] = useState([...menuItems]);
   const [showOptions, setshowOptions] = useState(null);
   const [carddata, setcardata] = useState(null);
+  
 
   useEffect(() => {
     fetchdata();

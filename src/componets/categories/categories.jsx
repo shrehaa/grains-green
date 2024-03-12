@@ -7,6 +7,7 @@ import { categories, menuItems } from "../../constants/constants";
 import "./categories.css";
 import search from "../../assets/search.png";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import Cart from "../cart/cart";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -53,11 +54,20 @@ const Categories = ({ getdata }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [sval, setsval] = useState("");
   const open = Boolean(anchorEl);
+  const [openCart, setOpenCart] = useState(false);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleCartClose = () => {
+    setOpenCart(false);
+  };
+
+  const handleCartOpen = () => {
+    setOpenCart(true);
   };
 
   const handleSearch = () => {
@@ -112,6 +122,7 @@ const Categories = ({ getdata }) => {
         />
       </div>
       <div className="cart-container">
+        <Cart open={openCart} handleClose={handleCartClose} />
         <AddShoppingCartIcon
           sx={{
             height: "40px",
@@ -119,8 +130,21 @@ const Categories = ({ getdata }) => {
             cursor: "pointer",
             marginTop: "5px",
           }}
+          onClick={handleCartOpen}
         />
+        
+        
+        <label style={{
+        borderRadius:"50%",
+        backgroundColor:"red",
+        marginBottom:"20px",
+        fontSize:"20px",
+        padding:"3px"
+
+
+      }}>7</label>
       </div>
+      
     </div>
   );
 };
