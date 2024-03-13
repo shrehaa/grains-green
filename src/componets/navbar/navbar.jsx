@@ -33,7 +33,11 @@ const Navbar = () => {
         <img className="logo" src={logo} alt="Grains & Green" />
       </div>
       <div className="credentials">
-        {loggedIn === 'false' ? (
+        { loggedIn === 'true' ? (
+          <button name="Logout" onClick={handleLogout} className="cred-btn">
+            Logout
+          </button>
+        ) :  (
           <div>
             <button
               className="cred-btn"
@@ -50,11 +54,7 @@ const Navbar = () => {
               Sign Up
             </button>
           </div>
-        ) : loggedIn === 'true' ? (
-          <button name="Logout" onClick={handleLogout} className="cred-btn">
-            Logout
-          </button>
-        ) : null}
+        )}
       </div>
       <div className="navitems"></div>
     </div>
