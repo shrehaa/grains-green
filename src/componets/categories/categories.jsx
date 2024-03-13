@@ -55,6 +55,10 @@ const Categories = ({ getdata, cartItems }) => {
   const [sval, setsval] = useState("");
   const open = Boolean(anchorEl);
   const [openCart, setOpenCart] = useState(false);
+  const [cartLabel, setCartLabel] = useState(cartItems.length);
+
+  console.log(cartLabel, "cartLabelOriginal")
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -122,7 +126,12 @@ const Categories = ({ getdata, cartItems }) => {
         />
       </div>
       <div className="cart-container">
-        <Cart open={openCart} handleClose={handleCartClose} cartData={cartItems}/>
+        <Cart
+          open={openCart}
+          handleClose={handleCartClose}
+          cartData={cartItems}
+          setCartLabel={setCartLabel}
+        />
         <AddShoppingCartIcon
           sx={{
             height: "40px",
@@ -133,17 +142,19 @@ const Categories = ({ getdata, cartItems }) => {
           onClick={handleCartOpen}
         />
 
-        {cartItems.length>0?<label
-          style={{
-            borderRadius: "50%",
-            backgroundColor: "red",
-            marginBottom: "20px",
-            fontSize: "20px",
-            padding: "3px",
-          }}
-        >
-          {cartItems.length}
-        </label>:null}
+        {cartLabel > 0 ? (
+          <label
+            style={{
+              borderRadius: "50%",
+              backgroundColor: "red",
+              marginBottom: "20px",
+              fontSize: "20px",
+              padding: "3px",
+            }}
+          >
+            {cartLabel}
+          </label>
+        ) : null}
       </div>
     </div>
   );
