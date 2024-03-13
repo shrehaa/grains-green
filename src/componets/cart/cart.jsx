@@ -57,7 +57,6 @@ const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
   }, [cartItems]);
 
   const cartAdd = (id) => {
-
     var addedItem = cartItems.filter((i) => i.i === id);
     addedItem[0].num++;
     setCartItems([...cartItems]);
@@ -66,7 +65,7 @@ const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
   const subtract = (id) => {
     var removedItem = cartItems.filter((i) => i.i === id);
     if (removedItem[0].num === 1) {
-      return
+      return;
     } else {
       removedItem[0].num--;
       setCartItems([...cartItems]);
@@ -84,7 +83,7 @@ const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
           return (
             <Box key={idx} sx={boxStyle}>
               <Box sx={imgBox}>
-                <img src={item.im} height="100%" width="100%"></img>
+                <img src={item.im} alt={item.im} height="100%" width="100%"></img>
               </Box>
               <Box sx={textBox}>
                 <h3 style={{ marginBottom: "50px" }}>{item.t}</h3>
@@ -92,7 +91,7 @@ const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
                   <div className="counter">
                     <Button
                       onClick={() => subtract(item.i)}
-                      disabled={item.num<2}
+                      disabled={item.num < 2}
                       sx={{ color: "black" }}
                     >
                       <RemoveIcon />
