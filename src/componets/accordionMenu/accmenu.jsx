@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -75,14 +75,15 @@ export default function CustomizedAccordions({ setCartItems, data }) {
   const [showOptions, setshowOptions] = useState(null);
   const [carddata, setcardata] = useState(null);
   const [cartArray, setcartArray] = useState([]);
+  const loggedin = localStorage.getItem("loggedin");
 
   useEffect(() => {
     fetchdata();
   }, []);
 
-  useEffect(()=>{
-    setCartItems(cartArray)
-  },[cartArray])
+  useEffect(() => {
+    setCartItems(cartArray);
+  }, [cartArray]);
 
   const fetchdata = async () => {
     const data = await fetch(home);
@@ -129,6 +130,19 @@ export default function CustomizedAccordions({ setCartItems, data }) {
     });
     setshowOptions(data);
   };
+
+  const handleAddItem = (item) =>{
+    console.log("hey")
+    const loggedin = localStorage.getItem("loggedin")
+    if(loggedin){
+      console.log(loggedin)
+      setcartArray([...cartArray, item]);
+    }
+    else {
+      alert("Please log in first");
+    };  
+    
+  }
 
   return (
     <div className="menu-container">
@@ -186,9 +200,9 @@ export default function CustomizedAccordions({ setCartItems, data }) {
                               <CardActions>
                                 {!cartArray.includes(item) ? (
                                   <Button
-                                    onClick={() =>
-                                      setcartArray([...cartArray, item])
-                                    }
+                                    onClick={() => {
+                                      handleAddItem(item)
+                                    }}
                                     sx={styles.cart}
                                     size="small"
                                   >

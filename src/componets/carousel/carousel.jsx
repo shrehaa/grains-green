@@ -1,7 +1,7 @@
 import "./carousel.css";
 import { src } from "../../constants/constants";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+import { Paper } from "@mui/material";
 
 const Carousels = () => {
   function Item({ item, name, des }) {
@@ -10,7 +10,6 @@ const Carousels = () => {
         <Paper className="papermui">
           <h2>The menu's most hot favourite & famous dishes</h2>
           <img className="img-food" alt="food" src={item} />
-          {/* <Button className="CheckButton">{name}</Button> */}
         </Paper>
         <div className="clipped">
           <h1>{name}</h1>

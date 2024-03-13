@@ -33,7 +33,6 @@ const textBox = {
 };
 
 const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
-  const [itemNum, setItemNum] = useState(1);
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -58,6 +57,7 @@ const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
   }, [cartItems]);
 
   const cartAdd = (id) => {
+
     var addedItem = cartItems.filter((i) => i.i === id);
     addedItem[0].num++;
     setCartItems([...cartItems]);
@@ -66,8 +66,7 @@ const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
   const subtract = (id) => {
     var removedItem = cartItems.filter((i) => i.i === id);
     if (removedItem[0].num === 1) {
-      var updated = cartItems.filter((num) => num.i !== id);
-      setCartItems([...updated]);
+      return
     } else {
       removedItem[0].num--;
       setCartItems([...cartItems]);
@@ -93,6 +92,7 @@ const Cart = ({ open, handleClose, cartData, setCartLabel }) => {
                   <div className="counter">
                     <Button
                       onClick={() => subtract(item.i)}
+                      disabled={item.num<2}
                       sx={{ color: "black" }}
                     >
                       <RemoveIcon />

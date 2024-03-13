@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -24,7 +24,6 @@ const style = {
 function Login({ open, handleClose, type, setLoggedIn }) {
   const [emailR, setmailR] = useState("");
   const [passwordR, setpasswordR] = useState("");
-  const loggedin = localStorage.getItem("loggedin");
   const localEmail = localStorage.getItem("username");
   const localPassword = localStorage.getItem("password");
 

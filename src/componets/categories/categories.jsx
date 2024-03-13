@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { styled, alpha } from "@mui/material/styles";
-import { categories, menuItems } from "../../constants/constants";
+import { menuItems } from "../../constants/constants";
 import "./categories.css";
 import search from "../../assets/search.png";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
@@ -57,7 +57,7 @@ const Categories = ({ getdata, cartItems }) => {
   const [openCart, setOpenCart] = useState(false);
   const [cartLabel, setCartLabel] = useState(cartItems.length);
 
-  console.log(cartLabel, "cartLabelOriginal")
+  console.log(cartLabel, "cartLabelOriginal");
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
