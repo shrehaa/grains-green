@@ -58,7 +58,7 @@ function Login({ open, handleClose, type, setLoggedIn }) {
   const handleSignIn = () => {
     if (emailR == localEmail && passwordR == localPassword) {
       localStorage.setItem("loggedin", true);
-      setLoggedIn(true);
+      setLoggedIn('true');
       handleClose();
       window.location.reload();
     } else {

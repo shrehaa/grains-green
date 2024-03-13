@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import "./navbar.css";
 import Login from "../Login/login";
@@ -6,7 +6,7 @@ import Login from "../Login/login";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [btnName, setbtnName] = useState(null);
-  const [loggedIn, setLoggedIn] = useState(Boolean(localStorage.getItem("loggedin")));
+  const [loggedIn, setLoggedIn] = useState(localStorage.getItem("loggedin"));
 
   const handleOpen = (e) => {
     setOpen(true);
@@ -16,8 +16,10 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.setItem("loggedin", false);
-    setLoggedIn(false);
+    setLoggedIn('false');
   };
+
+  console.log(loggedIn, "log in val")
 
   return (
     <div className="navbarcontainer">
@@ -31,7 +33,7 @@ const Navbar = () => {
         <img className="logo" src={logo} alt="Grains & Green" />
       </div>
       <div className="credentials">
-        {loggedIn === false ? (
+        {loggedIn === 'false' ? (
           <div>
             <button
               className="cred-btn"
@@ -48,7 +50,7 @@ const Navbar = () => {
               Sign Up
             </button>
           </div>
-        ) : loggedIn === true ? (
+        ) : loggedIn === 'true' ? (
           <button name="Logout" onClick={handleLogout} className="cred-btn">
             Logout
           </button>

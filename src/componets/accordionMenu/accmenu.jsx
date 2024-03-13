@@ -131,18 +131,15 @@ export default function CustomizedAccordions({ setCartItems, data }) {
     setshowOptions(data);
   };
 
-  const handleAddItem = (item) =>{
-    console.log("hey")
-    const loggedin = localStorage.getItem("loggedin")
-    if(loggedin){
-      console.log(loggedin)
+  const handleAddItem = (item) => {
+    const loggedin = localStorage.getItem("loggedin");
+    if (loggedin === "true") {
+      console.log(loggedin);
       setcartArray([...cartArray, item]);
-    }
-    else {
+    } else {
       alert("Please log in first");
-    };  
-    
-  }
+    }
+  };
 
   return (
     <div className="menu-container">
@@ -201,7 +198,7 @@ export default function CustomizedAccordions({ setCartItems, data }) {
                                 {!cartArray.includes(item) ? (
                                   <Button
                                     onClick={() => {
-                                      handleAddItem(item)
+                                      handleAddItem(item);
                                     }}
                                     sx={styles.cart}
                                     size="small"
