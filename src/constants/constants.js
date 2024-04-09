@@ -1,31 +1,32 @@
 export const src = [
   {
-    img: "https://i.ibb.co/X8zvCKt/src1.jpg",
-    name: "Cream Mushroom Spaghetti Bowl",
+    img: "https://d3gy1em549lxx2.cloudfront.net/d8f756d6-d528-44dd-b604-2686793288bd.JPG",
+    name: "Creamy Peri Peri Chicken Bowl",
     description:
-      "Cooked pasta mixed with a silky smooth & decadent white sauce made of milk, butter and flour. White Sauce also known as Bechamel Sauce has its origin from the Italian & French Cuisines. ",
+      "Peri-Peri and chicken – such a winning combination. The audacious chilli has found many a meat to be laden on, but here the chicken dices coated with a fiery peri-peri is simply a heavenly treat. Served on a bed of mexican rice with a lush fiery tomato base sauce, a creamy peri peri sauce, completes this wonder-meal in a bowl.",
+      "shd": "Chicken, rice, american corn, kidney beans, tomato, parsley, mirepoix, herbs thyme, peri peri seasoning, worcestershire sauce, dijon mustard, garlic, tri bell peppers, zucchini, broccoli, onion, cream, red bean, butter ",
   },
   {
-    img: "https://i.ibb.co/1ZBDxq9/src2.jpg",
-    name: "Pepper Mushroom Wrap",
+    img: "https://d3gy1em549lxx2.cloudfront.net/df242b78-d430-44a6-bf88-05aa9c973a37.JPG",
+    name: "Doujiang Korean Fried Chicken",
     description:
-      "Savor the earthy and rich flavors of Pepper Mushroom Tacos, which feature tender chicken and savory mushrooms wrapped in soft tortillas. This taco experience is enhanced by the addition of crisp lettuce and a sprinkle of cheese.",
+      "Enjoy the delicious Doujiang Korean Fried Chicken Bowl, a culinary treat that will tantalise your palate. Enjoy the crispy fried chicken, seasoned with a special blend of Korean spices, served with crisp vegetables and a flavorful Asian chilli and garlic sauce. Enjoy this dish, which is fibre- and protein-rich, to experience the intense flavours of Korean cuisine.",
   },
   {
-    img: "https://i.ibb.co/g4VK86g/src3.jpg",
+    img: "https://d3gy1em549lxx2.cloudfront.net/8106fd2e-4c9b-498b-99db-5f7034dfd859.jpeg",
     name: "The Greenhouse",
     description:
       "Not a meat lover, no problem. All the protein that you need is packed in this compact yet lavish breakfast. Masala omelette, cheesey spinach corn, baked beans and hashbrown",
     shd: "Masala Omelette, Hash Brown, Baked Beans, Spinach Corn Filling, Sub Toast",
   },
   {
-    img: "https://i.ibb.co/C7HjntS/src4.jpg",
+    img: "https://d3gy1em549lxx2.cloudfront.net/b5f302fa-e2d5-43a6-ad07-56c9f0619299.JPG",
     name: "Choco fudge blackout cake",
     description:
       "Dark chocolate sponge layered with milk chocolate truffle and dark chocolate truffles, is sure to be a perfect treat. Double layers mean double fun!",
   },
   {
-    img: "https://i.ibb.co/v4f81ty/src5.jpg",
+    img: "https://d3gy1em549lxx2.cloudfront.net/a62ee57e-e66d-44b1-bfe1-380b90cabd4f.JPG",
     name: "Moroccan Veggie Burger",
     description:
       "Introducing our new uniquely tall burger that will take your taste buds to the next level! This burger is stacked with chargrilled Moroccan paneer, fresh garden veggies, creamy cheese, and topped with tangy beetroot lebneh.",
