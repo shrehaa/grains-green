@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../../assets/logo.png";
 import "./navbar.css";
 import Login from "../Login/login";
 
@@ -30,7 +29,7 @@ const Navbar = () => {
         setLoggedIn={setLoggedIn}
       />
       <div className="logocontainer">
-        <img className="logo" src={logo} alt="Grains & Green" />
+        <img className="logo" src={"https://i.postimg.cc/LhZhNBpV/logo.png"} alt="Grains & Green" />
       </div>
       <div className="credentials">
         { loggedIn === 'true' ? (

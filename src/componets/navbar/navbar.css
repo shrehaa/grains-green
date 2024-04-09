@@ -4,7 +4,10 @@
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #fff;
+  background-image: url("../../assets/mandala.jpg");
+  background-size: 100%;
+  background-position-y:bottom
+
 }
 .navbarcontainer .logocontainer {
   width: 30%;

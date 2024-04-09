@@ -1,37 +1,31 @@
-import src1 from "../assets/src1.jpg";
-import src2 from "../assets/src2.jpg";
-import src3 from "../assets/src3.jpg";
-import src4 from "../assets/src4.jpg";
-import src5 from "../assets/src5.jpg";
-
 export const src = [
   {
-    img: src1,
+    img: "https://i.ibb.co/X8zvCKt/src1.jpg",
     name: "Cream Mushroom Spaghetti Bowl",
     description:
       "Cooked pasta mixed with a silky smooth & decadent white sauce made of milk, butter and flour. White Sauce also known as Bechamel Sauce has its origin from the Italian & French Cuisines. ",
   },
   {
-    img: src2,
+    img: "https://i.ibb.co/1ZBDxq9/src2.jpg",
     name: "Pepper Mushroom Wrap",
     description:
       "Savor the earthy and rich flavors of Pepper Mushroom Tacos, which feature tender chicken and savory mushrooms wrapped in soft tortillas. This taco experience is enhanced by the addition of crisp lettuce and a sprinkle of cheese.",
   },
   {
-    img: src3,
+    img: "https://i.ibb.co/g4VK86g/src3.jpg",
     name: "The Greenhouse",
     description:
       "Not a meat lover, no problem. All the protein that you need is packed in this compact yet lavish breakfast. Masala omelette, cheesey spinach corn, baked beans and hashbrown",
     shd: "Masala Omelette, Hash Brown, Baked Beans, Spinach Corn Filling, Sub Toast",
   },
   {
-    img: src4,
+    img: "https://i.ibb.co/C7HjntS/src4.jpg",
     name: "Choco fudge blackout cake",
     description:
       "Dark chocolate sponge layered with milk chocolate truffle and dark chocolate truffles, is sure to be a perfect treat. Double layers mean double fun!",
   },
   {
-    img: src5,
+    img: "https://i.ibb.co/v4f81ty/src5.jpg",
     name: "Moroccan Veggie Burger",
     description:
       "Introducing our new uniquely tall burger that will take your taste buds to the next level! This burger is stacked with chargrilled Moroccan paneer, fresh garden veggies, creamy cheese, and topped with tangy beetroot lebneh.",

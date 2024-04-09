@@ -140,7 +140,7 @@ export default function CustomizedAccordions({ setCartItems, data }) {
       alert("Please log in first");
     }
   };
-
+  console.log(showOptions, "im")
   return (
     <div className="menu-container">
       <h2>Mouth Watering healthy food from the Greens 🌳</h2>
